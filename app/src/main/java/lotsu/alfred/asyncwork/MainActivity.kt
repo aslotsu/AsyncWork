@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        CoroutineScope(Dispatchers.IO).launch{
+        CoroutineScope(Dispatchers.Main).launch{
             Log.i("MyTag", "Calculation started")
             val stock1 = async { getStock1() }
             val stock2 = async { getStock2() }
